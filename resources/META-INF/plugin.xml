@@ -1,7 +1,9 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>Tokyo_Night_YuKi</id>
-    <version>1.0.3</version>
+    <!-- 构建时由 patchPluginXml 用 project.version 覆盖，唯一来源是 gradle.properties 的 version；
+         此处保持同步仅为可读，改版本号请改 gradle.properties。 -->
+    <version>1.0.4</version>
 
     <name>Tokyo Night Theme</name>
     <category>UI</category>
@@ -23,6 +25,14 @@
     ]]></description>
 
     <change-notes><![CDATA[
+        <b>1.0.4</b> — Fixed folded-code placeholder text being unreadable in all three variants.
+        <br/>
+        <b>1.0.3</b> — Updated plugin id and icon.
+        <br/>
+        <b>1.0.2</b> — Renamed the project.
+        <br/>
+        <b>1.0.1</b> — Unified menu, menu item and separator colors across all themes. Added CI build and release workflows.
+        <br/>
         <b>1.0.0</b> — Initial release with three Tokyo Night variants.
     ]]></change-notes>
 

@@ -3,8 +3,10 @@ plugins {
 }
 
 group = "io.github.enkia"
-// 本地默认 1.0.1；CI 发版时可用 -Pversion=1.0.2 覆盖（见 .github/workflows/release.yml）
-version = providers.gradleProperty("version").orNull ?: "1.0.1"
+// 版本号唯一来源：gradle.properties 的 version 属性。
+// CI 发版时用 -Pversion=x.y.z 覆盖（命令行 -P 优先级高于 gradle.properties，见 .github/workflows/release.yml）。
+// 用 get() 而非 orNull 兜底：缺失时直接报错，避免静默退回旧版本号而被 Marketplace 拒绝上传。
+version = providers.gradleProperty("version").get()
 
 repositories {
     mavenCentral()

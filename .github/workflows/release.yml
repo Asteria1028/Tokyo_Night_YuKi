@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Plugin version to build and release (e.g. 1.0.2)"
+        description: "Plugin version to build and release (e.g. 1.0.4)"
         required: true
-        default: "1.0.1"
+        default: "1.0.4"
       draft:
         description: "Create the release as a draft (publish manually later)"
         type: boolean
